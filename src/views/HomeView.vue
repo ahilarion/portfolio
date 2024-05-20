@@ -49,8 +49,8 @@ onMounted(async () => {
   const speed = 200;
   const element = document.getElementById("demo");
 
-  //change the current route to the home route
   props.changeCurrentRoute("/");
+  document.title = "Home - Alan Hilarion";
 
   if (element.textContent.length > 0) {
     await new Promise(resolve => setTimeout(resolve, 1000));
