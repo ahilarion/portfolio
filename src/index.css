@@ -7,7 +7,7 @@
 /* Navigation Style */
 
 .nav-button {
-    @apply relative flex items-center px-10 border-stroke transition-all text-text;
+    @apply relative flex items-center px-8 md:px-10 border-stroke transition-all text-text;
 }
 
 .nav-button:hover {

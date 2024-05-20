@@ -4,7 +4,7 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <div class="w-full border border-stroke rounded bg-[rgba(1,22,39,0.8)] flex flex-col items-center">
+  <div class="relative w-full border border-stroke rounded bg-[rgba(1,22,39,0.6)] flex flex-col items-center z-10">
     <Navigation />
     <main class="flex-1 w-full">
       <router-view />
@@ -27,6 +27,7 @@ import Footer from "@/components/Footer.vue";
 
 .blurry-gradient-blue, .blurry-gradient-green {
   animation: oscillate 5s infinite; /* 5s here is the duration of one oscillation cycle */
+  position: fixed;
 }
 
 @media (min-width: 1024px) {
@@ -37,7 +38,7 @@ import Footer from "@/components/Footer.vue";
 
 .blurry-gradient-blue, .blurry-gradient-green {
   filter: blur(70px);
-  z-index: 10;
+  z-index: 0;
   position: fixed;
   width: 300px;
   height: 300px;

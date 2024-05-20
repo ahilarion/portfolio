@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         'fira-code': ['Fira Code', 'monospace'],
       },
+      screens: {
+        'md' : '1060px',
+        'sm' : '780px',
+      },
       colors: {
         'primary': '#011627',
         'secondary': '#010C15',

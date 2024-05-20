@@ -4,7 +4,7 @@ import NavigationButton from "@/components/NavigationButton.vue";
 </script>
 
 <template>
-  <footer class="w-full h-[50px] flex justify-between border-t border-t-stroke">
+  <footer class="w-full h-[50px] hidden md:flex justify-between border-t border-t-stroke">
     <div class="flex justify-start items-stretch text-text">
       <p class="flex items-center px-10 border-r border-stroke transition-all text-text select-none">
         find me in:
