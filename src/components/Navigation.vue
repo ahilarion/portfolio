@@ -10,21 +10,11 @@ const props = defineProps({
 });
 
 const routes = [
-  {
-    name: "_hello", path: "/"
-  },
-  {
-    name: "_about-me", path: "/about-me"
-  },
-  {
-    name: "_projects", path: "/projects"
-  },
-  {
-    name: "_contact-me", path: "/contact-me"
-  }
+  {name: "_hello", path: "/"},
+  {name: "_about-me", path: "/about-me"},
+  {name: "_projects", path: "/projects"},
+  {name: "_contact-me", path: "/contact-me"}
 ]
-
-
 
 </script>
 
@@ -32,7 +22,7 @@ const routes = [
   <header class="w-full h-[50px] flex justify-between border-b border-b-stroke">
     <div class="md:flex hidden w-full items-stretch justify-between">
       <div class="md:flex hidden justify-start items-stretch text-text">
-        <router-link href="/" class="flex items-center justify-between px-10 border-r border-stroke transition-all text-text w-[310px] select-none smiley" to="/">
+        <router-link href="/" class="flex items-center justify-between px-10 border-r border-stroke transition-all text-text md:w-64 xl:w-80 select-none smiley" to="/">
           alan-hilarion <span class="text-sp-blue">ಠ_ರೃ</span>
         </router-link>
         <NavigationButton to="/" :active="currentRoute === '/'">
