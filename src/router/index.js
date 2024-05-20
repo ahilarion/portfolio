@@ -17,11 +17,25 @@ const router = createRouter({
           path: 'professional',
           name: 'Professional',
           component: () => import('../views/ProfessionalView.vue'),
+          children: [
+            {
+              path: 'experience',
+              name: 'Experience',
+              component: () => import('../views/ExperienceView.vue')
+            },
+          ]
         },
         {
           path: 'personal',
           name: 'Personal',
-          component: () => import('../views/PersonalView.vue')
+          component: () => import('../views/PersonalView.vue'),
+          children: [
+            {
+              path: 'bio',
+              name: 'Bio',
+              component: () => import('../views/BioView.vue')
+            },
+          ]
         },
         {
           path: 'hobbies',

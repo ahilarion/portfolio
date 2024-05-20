@@ -24,12 +24,7 @@ import {defineProps, onMounted} from 'vue';
         <span class="text-text">Hob</span>
       </router-link>
     </div>
-    <div class="flex flex-col items-center justify-start w-64 h-full border-r border-stroke transition-all">
-      <router-view></router-view>
-    </div>
-    <div class="flex-1 flex items-center justify-center h-full">
-
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
