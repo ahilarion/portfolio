@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full flex items-center justify-evenly p-8 md:p-10">
+  <div class="h-full w-full flex items-center justify-evenly p-5 md:p-10">
     <div class="flex flex-col items-start gap-20">
       <div class="flex flex-col items-start gap-4">
         <p class="text-white text-xl md:text-3xl">
@@ -18,7 +18,7 @@
         <p class="text-text text-sm md:text-xl">
           // you can also see my Github page
         </p>
-        <p class="text-sm md:text-xl">
+        <p class="text-sm md:text-xl select-none">
           <span class="text-sp-blue">const </span>
           <span class="text-sp-green">githubLink </span>
           <span class="text-white">= </span>
@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue';
+import {onMounted} from 'vue';
 
 const text = "Full-stack developer";
 let i = 0;

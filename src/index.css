@@ -18,6 +18,14 @@
     @apply absolute bottom-0 left-0 w-full h-[2px] bg-transparent transition-all;
 }
 
-.nav-button:hover .underline {
+.nav-button:hover .underline, .nav-button.active .underline {
     @apply bg-[#FEA55F];
+}
+
+.smiley span {
+    @apply opacity-0 transition-all;
+}
+
+.smiley:hover span {
+    @apply opacity-100;
 }

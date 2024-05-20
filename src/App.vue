@@ -1,13 +1,22 @@
 <script setup>
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
+
+import { ref } from "vue";
+
+const currentRoute = ref("/");
+
+const changeCurrentRoute = (route) => {
+  currentRoute.value = route;
+}
+
 </script>
 
 <template>
   <div class="relative w-full border border-stroke rounded bg-[rgba(1,22,39,0.6)] flex flex-col items-center z-10">
-    <Navigation />
+    <Navigation :currentRoute="currentRoute" />
     <main class="flex-1 w-full">
-      <router-view />
+      <router-view :changeCurrentRoute="changeCurrentRoute" />
     </main>
     <Footer />
   </div>
