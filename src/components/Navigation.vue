@@ -28,7 +28,7 @@ const routes = [
         <NavigationButton to="/" :active="currentRoute === '/'">
           _hello
         </NavigationButton>
-        <NavigationButton to="/about-me/personal" :active="currentRoute === '/about-me'">
+        <NavigationButton to="/about-me/personal/bio" :active="currentRoute === '/about-me'">
           _about-me
         </NavigationButton>
         <NavigationButton to="/projects" :active="currentRoute === '/projects'">
