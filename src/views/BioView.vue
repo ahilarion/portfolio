@@ -36,7 +36,7 @@ function goToParent() {
     </div>
     <div class="flex-1 flex items-start justify-start w-full p-4">
       <div class="flex">
-        <div class="line-numbers flex flex-col text-right pr-4 text-[#8b8b8b]">
+        <div class="line-numbers flex flex-col text-right pr-4 text-[#8b8b8b] select-none">
           <div v-for="n in lineCount" :key="n">{{ n }}</div>
         </div>
         <div ref="textContentRef" class="text-content text-text text-justify">
