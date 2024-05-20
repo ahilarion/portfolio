@@ -10,6 +10,8 @@ export default {
         'fira-code': ['Fira Code', 'monospace'],
       },
       screens: {
+        'xl' : '1600px',
+        'lg' : '1370px',
         'md' : '1060px',
         'sm' : '780px',
       },

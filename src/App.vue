@@ -79,6 +79,7 @@ const changeCurrentRoute = (route) => {
     width: 500px;
     height: 500px;
     opacity: .7;
+    transition: all 1s;
   }
 
   .blurry-gradient-green {
@@ -88,12 +89,27 @@ const changeCurrentRoute = (route) => {
     width: 400px;
     height: 400px;
     opacity: .7;
+    transition: all 1s;
   }
 }
 
 @media (max-width: 1023px) {
-  .blurry-gradient-blue, .blurry-gradient-green {
-    display: none;
+  .blurry-gradient-blue {
+    border-radius: 100% 50% 100% 0;
+    right: -40%;
+    bottom: -10%;
+    width: 500px;
+    height: 500px;
+    opacity: .7;
+  }
+
+  .blurry-gradient-green {
+    border-radius: 50% 0 50% 100%;
+    right: -10%;
+    bottom: 40%;
+    width: 400px;
+    height: 400px;
+    opacity: .7;
   }
 }
 </style>
