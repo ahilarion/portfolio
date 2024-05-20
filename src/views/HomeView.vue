@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full flex justify-center items-center">
-    <div class="flex flex-col items-start gap-4">
+    <div class="flex flex-col items-start gap-20">
       <div class="flex flex-col items-start gap-4">
         <p class="text-white text-3xl">
           Hi all, I am
@@ -15,7 +15,17 @@
         </div>
       </div>
       <div>
-
+        <p class="text-text text-xl">
+          // you can also see my Github page
+        </p>
+        <p class="text-xl">
+          <span class="text-sp-blue">const </span>
+          <span class="text-sp-green">githubLink </span>
+          <span class="text-white">= </span>
+          <a href="https://github.com/ahilarion" class="text-sp-orange underline" target="_blank" rel="noopener noreferrer">
+            "https://github.com/ahilarion"
+          </a>
+        </p>
       </div>
     </div>
   </div>

@@ -14,7 +14,10 @@ export default {
         'secondary': '#010C15',
         'stroke': '#1E2D3D',
         'text': '#607B96',
+        // special colors
         'sp-blue' : '#4D5BCE',
+        'sp-green' : '#43D9AD',
+        'sp-orange' : '#E99287',
       }
     },
   },
