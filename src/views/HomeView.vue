@@ -36,13 +36,21 @@
 
 <script setup>
 import {onMounted} from 'vue';
+import {defineProps} from 'vue';
 
 const text = "Full-stack developer";
 let i = 0;
 
+const props = defineProps({
+  changeCurrentRoute: Function
+});
+
 onMounted(async () => {
   const speed = 200;
   const element = document.getElementById("demo");
+
+  //change the current route to the home route
+  props.changeCurrentRoute("/");
 
   if (element.textContent.length > 0) {
     await new Promise(resolve => setTimeout(resolve, 1000));
