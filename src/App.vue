@@ -6,7 +6,7 @@ import Footer from "@/components/Footer.vue";
 <template>
   <div class="w-full border border-stroke rounded bg-[rgba(1,22,39,0.8)] flex flex-col items-center">
     <Navigation />
-    <main class="flex-1 w-full flex flex-col items-center justify-center">
+    <main class="flex-1 w-full">
       <router-view />
     </main>
     <Footer />

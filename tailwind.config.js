@@ -14,6 +14,7 @@ export default {
         'secondary': '#010C15',
         'stroke': '#1E2D3D',
         'text': '#607B96',
+        'sp-blue' : '#4D5BCE',
       }
     },
   },
