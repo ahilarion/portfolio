@@ -6,9 +6,9 @@ import NavigationButton from "@/components/NavigationButton.vue";
 <template>
   <header class="w-full h-[50px] flex justify-between border-b border-b-stroke">
     <div class="flex justify-start items-stretch text-text">
-      <NavigationButton to="/" big>
+      <p class="flex items-center px-10 border-r border-stroke transition-all text-text w-[310px] select-none">
         alan-hilarion
-      </NavigationButton>
+      </p>
       <NavigationButton to="/">
         _hello
       </NavigationButton>
