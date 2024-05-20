@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navigation Style */
+
+.nav-button {
+    @apply relative flex items-center px-10 border-stroke transition-all text-text;
+}
+
+.nav-button:hover {
+    @apply bg-[#1e2d3d74] text-white;
+}
+
+.nav-button .underline {
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-transparent transition-all;
+}
+
+.nav-button:hover .underline {
+    @apply bg-[#FEA55F];
+}
