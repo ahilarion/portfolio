@@ -11,7 +11,7 @@
         <div class="flex items-center justify-start">
           <p class="text-sp-blue text-xl sm:text-3xl mr-2">></p>
           <p id="demo" class="text-sp-blue text-xl sm:text-3xl"></p>
-          <p class="text-white text-xl sm:text-3xl animate-blink">|</p>
+          <p class="text-white text-xl sm:text-3xl text-cursor animate-blink">|</p>
         </div>
       </div>
       <div class="flex flex-col items-start gap-4">
@@ -46,8 +46,9 @@ const props = defineProps({
 });
 
 onMounted(async () => {
-  const speed = 200;
+  const speed = 150;
   const element = document.getElementById("demo");
+  const cursor = document.querySelector(".text-cursor");
 
   props.changeCurrentRoute("/");
   document.title = "Home - Alan Hilarion";
@@ -55,22 +56,27 @@ onMounted(async () => {
   if (element.textContent.length > 0) {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
+    cursor.classList.add("hidden");
     element.style.backgroundColor = "#0d47a1";
 
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     element.textContent = "";
 
+    cursor.classList.remove("hidden");
     element.style.backgroundColor = "transparent";
   }
 
   await new Promise(resolve => setTimeout(resolve, 1000));
 
   while (i < text.length) {
+    cursor.classList.remove("animate-blink");
     element.textContent += text.charAt(i);
     i++;
     await new Promise(resolve => setTimeout(resolve, speed));
   }
+
+  cursor.classList.add("animate-blink");
 });
 </script>
 
@@ -81,6 +87,6 @@ onMounted(async () => {
 }
 
 .animate-blink {
-  animation: blink 0.5s step-end infinite;
+  animation: blink 1s step-end infinite;
 }
 </style>
