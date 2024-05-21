@@ -34,10 +34,9 @@ const routes = [
           _projects
         </NavigationButton>
       </div>
-      <a href="mailto:contact@alan-hilarion.fr" class="nav-button border-l flex items-center gap-4" target="_blank" rel="noopener noreferrer">
+      <NavigationButton to="/contact-me" :active="currentRoute === '/contact-me'" left>
         _contact-me
-        <span class="underline"></span>
-      </a>
+      </NavigationButton>
     </div>
     <div class="md:hidden flex w-full items-stretch justify-between">
       <router-link to="/" class="flex items-center px-5 transition-all text-text select-none whitespace-nowrap justify-between">
