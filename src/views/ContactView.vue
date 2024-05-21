@@ -24,7 +24,18 @@ function updateLineCount() {
 }
 
 function sendForm() {
-  // send the mail to contact@alan-hilarion.fr
+  let subject = "Contact from " + data.value.name;
+  let body = data.value.message;
+  let mailto = "mailto:contact@alan-hilarion.fr";
+
+  data.value = {
+    email: "",
+    message: "",
+    date: new Date().toDateString(),
+    name: ""
+  };
+
+  window.location.href = mailto + "?subject=" + subject + "&body=" + body;
 }
 
 function goToParent() {
@@ -65,7 +76,7 @@ onMounted(async () => {
             </div>
             <div class="flex flex-col items-start justify-start w-full gap-2">
               <label for="message" class="text-text">Message</label>
-              <textarea placeholder="Message" class="w-full h-32 p-4 border border-stroke rounded-lg text-text bg-primary" v-model="data.message"></textarea>
+              <textarea placeholder="Message" class="w-full h-32 p-4 border border-stroke rounded-lg text-text bg-primary resize-none" v-model="data.message" maxlength="250"></textarea>
             </div>
             <button class="flex items-center justify-center w-full h-12 text-text bg-primary border border-stroke rounded-lg hover:bg-sp-blue hover:text-primary transition-all" @click="sendForm">Send</button>
           </div>
