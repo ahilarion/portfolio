@@ -1,26 +1,26 @@
 <script setup>
-import { ref, onMounted  } from 'vue';
+import {onMounted, ref} from 'vue';
 import router from "@/router/index.js";
 
-const textContentRef = ref(null);
-const lineCount = ref(0);
+const dynamicLineCount = ref(0);
 
-const countLines = () => {
-  const textContent = textContentRef.value;
+function updateLineCount() {
+  const textContent = document.querySelector('.text-content');
   if (textContent) {
     const lineHeight = parseFloat(getComputedStyle(textContent).lineHeight);
     const totalHeight = textContent.scrollHeight;
-    lineCount.value = Math.ceil(totalHeight / lineHeight);
+    dynamicLineCount.value = Math.ceil(totalHeight / lineHeight);
   }
-};
-
-onMounted(() => {
-  countLines();
-});
+}
 
 function goToParent() {
   router.push("/about-me/personal");
+  updateLineCount();
 }
+
+onMounted(() => {
+  updateLineCount();
+});
 
 </script>
 
@@ -35,19 +35,12 @@ function goToParent() {
       </div>
     </div>
     <div class="flex-1 flex items-start justify-start w-full p-4">
-      <div class="flex">
+      <div class="grid grid-cols-[1fr_30fr] w-full">
         <div class="line-numbers flex flex-col text-right pr-4 text-[#8b8b8b] select-none">
-          <div v-for="n in lineCount" :key="n">{{ n }}</div>
+          <div v-for="n in dynamicLineCount" :key="n">{{ n }}</div>
         </div>
-        <div ref="textContentRef" class="text-content text-text text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloremque eaque exercitationem facere libero
-          odit placeat, qui ratione, recusandae sunt, tenetur velit? Blanditiis dolore doloribus earum, eligendi, error
-          est facere mollitia, non pariatur provident quia quisquam quod rem repellendus voluptas! Aliquam commodi
-          consequuntur cumque dignissimos ducimus, facere illo non odit perferendis possimus quia, reprehenderit sequi
-          tenetur. Adipisci atque, consectetur dignissimos dolores eveniet expedita fuga laboriosam libero magnam
-          officiis perferendis possimus quasi quod, ratione recusandae rem repudiandae saepe! Ab aliquid autem ducimus
-          ea est modi nam necessitatibus, nesciunt numquam, odit placeat quas quasi repudiandae? Aperiam architecto
-          inventore ipsa vel voluptas voluptatibus?
+        <div class="text-content text-text text-justify h-auto">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi delectus dignissimos incidunt natus non odit voluptates voluptatum! Blanditiis cumque deserunt eum excepturi iste, magni modi ratione reprehenderit suscipit velit veritatis vitae! Adipisci, aperiam architecto asperiores at corporis cupiditate dolore dolores ducimus error et eum ex exercitationem illum incidunt laboriosam laborum laudantium magni modi molestiae necessitatibus neque nihil non odit perspiciatis quas quasi quisquam quod reiciendis repellat sequi, similique sit soluta suscipit tempora temporibus, unde voluptas. Accusamus at consequatur consequuntur cumque distinctio dolorum eaque earum eligendi esse eum eveniet fuga id, illo iste maiores modi natus necessitatibus nostrum obcaecati officia omnis placeat porro possimus quam quia quos reiciendis reprehenderit repudiandae sapiente sequi, tempora tempore tenetur totam velit veniam, vero voluptates? Atque in obcaecati recusandae.
         </div>
       </div>
     </div>
