@@ -13,7 +13,7 @@ import {defineProps, onMounted} from 'vue';
 </script>
 
 <template>
-  <div class="h-full w-full flex items-center justify-start">
+  <div class="h-full w-full flex items-center justify-start sized">
     <div class="flex flex-col items-center justify-start w-80 h-full border-r border-stroke transition-all gap-6 py-8">
       <div class="flex items-center justify-start gap-x-4 w-full transition-all fill-stroke hover:fill-text text-text px-10 select-none cursor-pointer">
         <input type="checkbox" id="react" name="react" value="react" class="checkbox">
@@ -46,6 +46,27 @@ import {defineProps, onMounted} from 'vue';
         <label class="cursor-pointer" for="symfony">Symfony</label>
       </div>
     </div>
+    <div class="flex-1 flex flex-wrap items-start justify-start w-full h-[calc(100vh-2.5rem-7rem-2.6rem)] max-h-[calc(100vh-2.5rem-7rem-2.6rem)] transition-all p-4 overflow-y-scroll">
+      <div class="card p-4 flex flex-col gap-4" v-for="i in 100" :key="i">
+        <h1 class="text-sp-blue">
+          Project {{ i }}
+          <span class="text-text">
+            // _ui-website
+          </span>
+        </h1>
+        <div class="bg-primary rounded p-4">
+          <img src="https://source.unsplash.com/random/800x600" alt="Project {{ i }}" class="w-full h-48 object-cover rounded">
+          <!-- tags -->
+          <div class="flex items-center justify-start gap-2 mt-4">
+            <span class="bg-sp-blue text-white rounded-full px-2 py-1 text-xs">React</span>
+            <span class="bg-sp-green text-white rounded-full px-2 py-1 text-xs">HTML</span>
+          </div>
+          <p class="text-text mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec dui in nunc ultricies tincidunt. Nullam nec dui in nunc ultricies tincidunt. Nullam nec dui in nunc ultricies tincidunt.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,5 +74,19 @@ import {defineProps, onMounted} from 'vue';
   .checkbox {
     background-color: transparent;
     cursor: pointer;
+  }
+
+  .card {
+    flex-basis: calc((100% / 3));
+  }
+  @media (max-width: 1200px) {
+    .card {
+      flex-basis: calc((100% / 2));
+    }
+  }
+  @media (max-width: 768px) {
+    .card {
+      flex-basis: calc(100%);
+    }
   }
 </style>

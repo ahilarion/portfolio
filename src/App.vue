@@ -13,7 +13,7 @@ const changeCurrentRoute = (route) => {
 </script>
 
 <template>
-  <div class="relative w-full border border-stroke rounded bg-[rgba(1,22,39,0.6)] flex flex-col items-center z-10">
+  <div class="relative w-full border border-stroke rounded bg-[rgba(1,22,39,0.6)] flex flex-col items-center z-10 overflow-hidden">
     <Navigation :currentRoute="currentRoute" />
     <main class="flex-1 w-full">
       <router-view :changeCurrentRoute="changeCurrentRoute" />

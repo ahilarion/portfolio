@@ -19,7 +19,7 @@ const routes = [
 </script>
 
 <template>
-  <header class="w-full h-[50px] flex justify-between border-b border-b-stroke">
+  <header class="w-full h-14 flex justify-between border-b border-b-stroke">
     <div class="md:flex hidden w-full items-stretch justify-between">
       <div class="md:flex hidden justify-start items-stretch text-text">
         <router-link href="/" class="flex items-center justify-between px-10 border-r border-stroke transition-all text-text w-80 select-none smiley" to="/">
